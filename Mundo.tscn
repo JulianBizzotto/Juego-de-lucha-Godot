@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Personaje.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Escenario.jpg" type="Texture" id=2]
+[ext_resource path="res://Vida del jugador.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Mana del jugador.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemigo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Vida del enemigo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Mana del enemigo.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 799.941, 14.0849 )
+
+[node name="Mundo" type="Node"]
+
+[node name="Escenario" type="StaticBody2D" parent="."]
+
+[node name="Escenario" type="Sprite" parent="Escenario"]
+position = Vector2( 800.014, 449.997 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Escenario"]
+position = Vector2( 799.056, 886.187 )
+shape = SubResource( 1 )
+
+[node name="hpj1" parent="." instance=ExtResource( 3 )]
+anchor_left = 0.017
+anchor_top = 0.0328889
+anchor_right = 0.294
+anchor_bottom = 0.102889
+margin_left = 10.8
+margin_top = 25.4
+margin_right = 11.6
+margin_bottom = -0.599998
+hint_tooltip = "
+"
+
+[node name="energyj1" parent="." instance=ExtResource( 4 )]
+margin_left = 54.0
+margin_top = 49.3
+margin_right = 19.6
+margin_bottom = 13.6
+
+[node name="HPIA" parent="." instance=ExtResource( 6 )]
+margin_left = 1099.05
+margin_top = 16.3
+margin_right = 1104.65
+margin_bottom = -2.4
+
+[node name="energyia" parent="." instance=ExtResource( 7 )]
+margin_left = 1104.08
+margin_top = 52.1339
+margin_right = 1086.68
+margin_bottom = 16.4339
+
+[node name="Personaje" parent="." instance=ExtResource( 1 )]
+position = Vector2( 116.653, 778.935 )
+
+[node name="Enemigo" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1410.57, 773.402 )

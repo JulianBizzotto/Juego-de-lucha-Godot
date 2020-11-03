@@ -1,0 +1,80 @@
+[gd_resource type="Animation" load_steps=13 format=2]
+
+[ext_resource path="res://Sprites/Luffy Golpe largo2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Luffy Golpe largo1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Luffy Golpe largo3.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Luffy Golpe largo4.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Luffy Golpe largo1.1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Luffy Golpe largo5.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Luffy Golpe largo1.7.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Luffy Golpe largo7.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Luffy Golpe largo1.4.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Luffy Golpe largo1.5.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Luffy Golpe largo6.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Luffy Golpe largo8.png" type="Texture" id=12]
+
+[resource]
+resource_name = "Golpe largo"
+length = 1.5
+loop = true
+step = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyPivot/Images:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0668447, 0.17314, 0.299041, 0.428606, 0.541623, 0.651822, 0.769702, 0.907794, 1.01798, 1.1431, 1.26468, 1.37346 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 12 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Area/Colision:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BodyPivot/Images:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.0667385, 0.0668344, 0.173049, 0.173141, 0.29886, 0.298991, 0.428522, 0.428603, 0.541482, 0.541589, 0.651646, 0.651771, 0.769559, 0.769644, 0.907743, 0.907784, 1.01791, 1.018 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2.37842, 3.56763 ), Vector2( 0.561256, 0 ), Vector2( -66.5956, 8.8857 ), Vector2( -66.2976, 8.4559 ), Vector2( -91.2922, 23.9285 ), Vector2( -96.2236, 25.6616 ), Vector2( -120.055, 11.3703 ), Vector2( -123.016, 10.5379 ), Vector2( 16.2072, 8.15747 ), Vector2( 15.3841, 10.0667 ), Vector2( 84.4229, -4.21556 ), Vector2( 86.866, -2.09663 ), Vector2( 77.3469, 27.6582 ), Vector2( 73.5504, 27.9387 ), Vector2( 136.621, 23.1787 ), Vector2( 135.494, 21.8791 ), Vector2( 211.625, 18.3101 ), Vector2( 209.465, 15.5348 ), Vector2( 22.2722, 7.18172 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Golpe/Colision_Ataques:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.546729, 1.01922 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Golpe/Colision_Ataques:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.546729, 0.653119, 0.771331, 0.908752 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -8.16832, -14.7828 ), Vector2( 124.753, -12.8929 ), Vector2( 109.919, -13.1038 ), Vector2( 220.687, -7.03858 ), Vector2( 377.225, -9.53674e-07 ) ]
+}

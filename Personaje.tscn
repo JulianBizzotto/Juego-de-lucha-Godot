@@ -1,0 +1,195 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://Agacharse.tres" type="Animation" id=1]
+[ext_resource path="res://Correr.tres" type="Animation" id=2]
+[ext_resource path="res://Personaje.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Luffy inmovil3.png" type="Texture" id=4]
+[ext_resource path="res://Normal.tres" type="Animation" id=5]
+[ext_resource path="res://Salto.tres" type="Animation" id=6]
+[ext_resource path="res://Golpe1.tres" type="Animation" id=7]
+[ext_resource path="res://Golpe2.tres" type="Animation" id=8]
+[ext_resource path="res://Cubrirse.tres" type="Animation" id=9]
+[ext_resource path="res://Golpe3.tres" type="Animation" id=10]
+[ext_resource path="res://Patada.tres" type="Animation" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 25.2931, 37.9171 )
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "Agacharse"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "Correr"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "Cubrirse"
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "Golpe1"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "Golpe2"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "Golpe3"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "Normal"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "Patada"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "Salto"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=14]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+switch_mode = 2
+auto_advance = true
+priority = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=32]
+states/Agacharse/node = SubResource( 2 )
+states/Agacharse/position = Vector2( 509.299, 33 )
+states/Correr/node = SubResource( 3 )
+states/Correr/position = Vector2( 293, 33 )
+states/Cubrirse/node = SubResource( 4 )
+states/Cubrirse/position = Vector2( 92.299, 33 )
+states/Golpe1/node = SubResource( 5 )
+states/Golpe1/position = Vector2( -138.701, 33 )
+states/Golpe2/node = SubResource( 6 )
+states/Golpe2/position = Vector2( -138.701, 126 )
+states/Golpe3/node = SubResource( 7 )
+states/Golpe3/position = Vector2( -138.701, 214.298 )
+states/Normal/node = SubResource( 8 )
+states/Normal/position = Vector2( 223, 126 )
+states/Patada/node = SubResource( 9 )
+states/Patada/position = Vector2( 223, 239.08 )
+states/Salto/node = SubResource( 10 )
+states/Salto/position = Vector2( 476, 163 )
+transitions = [ "Normal", "Correr", SubResource( 11 ), "Correr", "Normal", SubResource( 12 ), "Normal", "Salto", SubResource( 13 ), "Salto", "Normal", SubResource( 14 ), "Patada", "Normal", SubResource( 15 ), "Normal", "Patada", SubResource( 16 ), "Normal", "Cubrirse", SubResource( 17 ), "Cubrirse", "Normal", SubResource( 18 ), "Normal", "Agacharse", SubResource( 19 ), "Agacharse", "Normal", SubResource( 20 ), "Normal", "Golpe1", SubResource( 21 ), "Golpe1", "Normal", SubResource( 22 ), "Normal", "Golpe2", SubResource( 23 ), "Golpe2", "Normal", SubResource( 24 ), "Normal", "Golpe3", SubResource( 25 ), "Golpe3", "Normal", SubResource( 26 ), "Correr", "Golpe2", SubResource( 27 ), "Correr", "Golpe3", SubResource( 28 ), "Golpe1", "Golpe2", SubResource( 29 ), "Golpe2", "Golpe3", SubResource( 30 ), "Salto", "Correr", SubResource( 31 ) ]
+start_node = "Normal"
+graph_offset = Vector2( -277.573, 12.955 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=33]
+
+[sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 60.8455, 2.68307 )
+
+[sub_resource type="CapsuleShape2D" id=35]
+radius = 29.221
+height = 503.016
+
+[node name="Personaje" type="KinematicBody2D" groups=[
+"Personaje",
+]]
+position = Vector2( 216.43, 214.135 )
+script = ExtResource( 3 )
+
+[node name="Golpe" type="Area2D" parent="." groups=[
+"golpe",
+]]
+position = Vector2( 97, 0 )
+
+[node name="Colision_Ataques" type="CollisionShape2D" parent="Golpe"]
+position = Vector2( -7.19437, -10.7635 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="BodyPivot" type="Position2D" parent="."]
+position = Vector2( -0.561249, -0.561234 )
+
+[node name="Images" type="Sprite" parent="BodyPivot"]
+position = Vector2( 0.561249, 0 )
+scale = Vector2( 3.41018, 3.42535 )
+texture = ExtResource( 4 )
+
+[node name="Animaciones" type="AnimationPlayer" parent="."]
+pause_mode = 1
+anims/Agacharse = ExtResource( 1 )
+anims/Correr = ExtResource( 2 )
+anims/Cubrirse = ExtResource( 9 )
+anims/Golpe1 = ExtResource( 7 )
+anims/Golpe2 = ExtResource( 8 )
+anims/Golpe3 = ExtResource( 10 )
+anims/Normal = ExtResource( 5 )
+anims/Patada = ExtResource( 11 )
+anims/Salto = ExtResource( 6 )
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 0.181
+autostart = true
+
+[node name="AnimacionesBasicas" type="AnimationTree" parent="."]
+tree_root = SubResource( 32 )
+anim_player = NodePath("../Animaciones")
+active = true
+parameters/playback = SubResource( 33 )
+
+[node name="Colision_piso" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 92.4844 )
+shape = SubResource( 34 )
+
+[node name="Tiempolimited" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Area" type="Area2D" parent="."]
+position = Vector2( 0, 33 )
+
+[node name="Colision" type="CollisionShape2D" parent="Area"]
+position = Vector2( 0, -24.386 )
+rotation = 0.00896307
+scale = Vector2( 2, 0.3 )
+shape = SubResource( 35 )
+[connection signal="body_entered" from="Golpe" to="." method="_on_Golpe_body_entered"]
+[connection signal="animation_finished" from="Animaciones" to="." method="_on_Animaciones_animation_finished"]
+[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Mana del jugador.tscn" type="PackedScene" id=1]
+
+[node name="energyia" groups=[
+"energyia",
+] instance=ExtResource( 1 )]
+margin_top = 21.3222
+margin_bottom = -3.3778
+
+[node name="TextureRect" parent="." index="0"]
+margin_left = 388.358
+margin_top = -25.0722
+margin_right = 445.358
+margin_bottom = 20.9278

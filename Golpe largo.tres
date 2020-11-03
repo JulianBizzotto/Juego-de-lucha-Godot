@@ -1,0 +1,44 @@
+[gd_resource type="Animation" load_steps=13 format=2]
+
+[ext_resource path="res://Sprites/Luffy Golpe largo2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Luffy Golpe largo1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Luffy Golpe largo3.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Luffy Golpe largo4.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Luffy Golpe largo1.1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Luffy Golpe largo5.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Luffy Golpe largo1.7.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Luffy Golpe largo7.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Luffy Golpe largo1.4.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Luffy Golpe largo1.5.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Luffy Golpe largo6.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Luffy Golpe largo8.png" type="Texture" id=12]
+
+[resource]
+resource_name = "Golpe largo"
+length = 1.8
+loop = true
+step = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyPivot/Images:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.10409, 0.250291, 0.402796, 0.564285, 0.669321, 0.731633, 0.838872, 0.979624, 1.19357, 1.40382, 1.52806, 1.66078 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 12 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Colision:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.244037, 0.266927, 0.550155, 0.843571, 1.0025, 1.16348, 1.21442 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -19.2647, 7.08447 ), Vector2( -0.972687, -3.10938 ), Vector2( 105.039, 1.72864 ), Vector2( 129.764, 2.30742 ), Vector2( 153.986, -12.2119 ), Vector2( 234.904, -9.48653 ), Vector2( 238.339, -4.12476 ), Vector2( -17.3616, 0.0918427 ) ]
+}
