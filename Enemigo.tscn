@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=92 format=2]
 
 [ext_resource path="res://Sprites enemigos/Zoro/Zoro inmovil1.png" type="Texture" id=1]
 [ext_resource path="res://Sprites enemigos/Zoro/Zoro salto1.png" type="Texture" id=2]
@@ -45,12 +45,14 @@
 [ext_resource path="res://Sprites enemigos/Zoro/Zoro combo saltando3.png" type="Texture" id=43]
 [ext_resource path="res://Sprites enemigos/Zoro/Zoro combo saltando5.png" type="Texture" id=44]
 [ext_resource path="res://Enemigo.gd" type="Script" id=45]
+[ext_resource path="res://Particulas chispa.tscn" type="PackedScene" id=46]
+[ext_resource path="res://uaaaah Zoro.ogg" type="AudioStream" id=47]
+[ext_resource path="res://Efecto dos espada.ogg" type="AudioStream" id=48]
 
-[sub_resource type="RectangleShape2D" id=42]
-extents = Vector2( 52.3813, 3.83865 )
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 52.3813, 1.422 )
 
-[sub_resource type="Animation" id=1]
-resource_name = "Agachado"
+[sub_resource type="Animation" id=2]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Cuerpo:texture")
@@ -113,8 +115,7 @@ tracks/4/keys = {
 "values": [ Vector2( 5.16429, 15.0714 ), Vector2( 5.91347, 39.0443 ), Vector2( 5.16429, 39.0443 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "Ataque combo"
+[sub_resource type="Animation" id=3]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Cuerpo:texture")
@@ -135,10 +136,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.0707268, 0.14428, 0.144398, 0.235848, 0.235926, 0.310831, 0.310948, 0.370447, 0.370564, 0.45651, 0.456589 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.0709603, 0.144688, 0.236762, 0.311107, 0.371363, 0.456575 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -8.90823, 8.57373 ), Vector2( -10.8752, 9.15971 ), Vector2( -19.2121, 8.7731 ), Vector2( 16.7861, 8.77248 ), Vector2( 13.8464, 9.04097 ), Vector2( -13.0997, 8.29076 ), Vector2( -12.6888, 8.3185 ), Vector2( -40.4068, 8.31854 ), Vector2( -37.687, 8.34058 ), Vector2( -60.1562, 8.34062 ), Vector2( -57.6535, 8.37245 ), Vector2( -22.4363, 6.87418 ) ]
+"values": [ Vector2( 7.47076, 3.53404 ), Vector2( 15.0303, 3.53404 ), Vector2( -9.50812, 3.53404 ), Vector2( 12.4784, 2.27412 ), Vector2( 37.819, 3.02681 ), Vector2( 56.5831, 3.70113 ), Vector2( 17.798, 1.15865 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D/Colision_cuerpo:scale")
@@ -176,9 +177,56 @@ tracks/4/keys = {
 "update": 1,
 "values": [ true, false, true ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("Audio2:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.257518, 0.716746 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Audio1:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.236365, 0.667588 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Posicion_particulas/Particulas_chispa:emitting")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.1, 0.354986 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Posicion_particulas/Particulas_chispa:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.24, 0.35, 0.450049 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 119.616, 2.48625 ), Vector2( 117.237, -22.4871 ), Vector2( 136.609, -17.0887 ), Vector2( 124.555, 61.4343 ) ]
+}
 
-[sub_resource type="Animation" id=3]
-resource_name = "Ataque fuerte"
+[sub_resource type="Animation" id=4]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -200,10 +248,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.0679552, 0.0680724, 0.15539, 0.233078, 0.233156, 0.366313, 0.366391, 0.462078, 0.462156, 0.6 ),
+"times": PoolRealArray( 0, 0.0680624, 0.0681015, 0.15549, 0.233038, 0.233155, 0.366326, 0.366443, 0.462092, 0.46217, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 5.32565, 25.0551 ), Vector2( 3.97482, 24.9959 ), Vector2( -25.2949, 22.7445 ), Vector2( -31.9098, 22.3139 ), Vector2( -28.6578, 22.27 ), Vector2( -9.9006, 21.522 ), Vector2( -10.2251, 23.8713 ), Vector2( 17.5097, 25.3718 ), Vector2( 17.014, 18.8616 ), Vector2( 4.26845, 1.61534 ), Vector2( 5.32562, 0.333054 ) ]
+"values": [ Vector2( 5.32565, 25.0551 ), Vector2( -0.343994, 21.2753 ), Vector2( 29.3, 16.8582 ), Vector2( 31.6607, 18.2049 ), Vector2( 31.4904, 16.883 ), Vector2( 17.6101, 17.5119 ), Vector2( 13.1506, 20.2502 ), Vector2( -15.2016, 17.7328 ), Vector2( -6.79503, 20.7315 ), Vector2( 4.5511, -2.57462 ), Vector2( 0.915939, -2.66316 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D/Colision_cuerpo:position")
@@ -224,14 +272,61 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.070927, 0.6 ),
+"times": PoolRealArray( 0, 0.0679973, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, true ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Audio1:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.0714861, 0.498097 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Audio2:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.0714861, 0.547676 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Posicion_particulas/Particulas_chispa:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.05, 0.35 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Posicion_particulas/Particulas_chispa:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.0704643, 0.350644 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 117.477, -19.9676 ), Vector2( 115.23, 25.7308 ), Vector2( 117.541, 67.7768 ) ]
+}
 
-[sub_resource type="Animation" id=4]
-resource_name = "Ataque ligero"
+[sub_resource type="Animation" id=5]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -253,10 +348,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.0304882, 0.0305272, 0.113708, 0.113786, 0.15674, 0.216411, 0.266464, 0.34825, 0.348367, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.0301931, 0.0312166, 0.112584, 0.11412, 0.347988, 0.349012, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -9.33681, -13.0962 ), Vector2( 8.64546, -0.355186 ), Vector2( 5.95643, -0.555557 ), Vector2( -31.4738, -1.30701 ), Vector2( -30.5269, -1.04792 ), Vector2( -28.7231, -1.21457 ), Vector2( -31.9532, -0.0225983 ), Vector2( -29.9683, -1.32423 ), Vector2( 4.50323, 1.67305 ), Vector2( 10.3187, 1.26038 ) ]
+"values": [ Vector2( 6.53895, -18.2684 ), Vector2( 5.26871, -16.0996 ), Vector2( -12.3599, -7.55904 ), Vector2( -10.3596, -8.69252 ), Vector2( 34.4053, -6.19407 ), Vector2( 30.0264, -9.01515 ), Vector2( -2.2604, -5.29796 ), Vector2( -4.17039, -5.03921 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D/Colision_cuerpo:position")
@@ -289,14 +384,61 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.118212, 0.8 ),
+"times": PoolRealArray( 0, 0.117441, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, true ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("Audio1:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.116453, 0.125677, 0.604173 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Audio2:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.1153, 0.261731 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Posicion_particulas/Particulas_chispa:emitting")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.11, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Posicion_particulas/Particulas_chispa:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.129185, 0.378341 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 121.4, -26.6493 ), Vector2( 118.033, 66.5151 ) ]
+}
 
-[sub_resource type="Animation" id=5]
-resource_name = "Correr"
+[sub_resource type="Animation" id=6]
 length = 0.7
 loop = true
 tracks/0/type = "value"
@@ -311,9 +453,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cuerpo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.119057, 14.9225 ), Vector2( -0.119057, 14.9225 ) ]
+}
 
-[sub_resource type="Animation" id=6]
-resource_name = "Golpe salto"
+[sub_resource type="Animation" id=7]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -364,8 +517,56 @@ tracks/3/keys = {
 "update": 1,
 "values": [ true, false, true ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Audio2:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.21, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Audio1:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.3, 0.74 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Posicion_particulas/Particulas_chispa:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.45, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Posicion_particulas/Particulas_chispa:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.4, 0.59, 0.633355 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 114.859, -9.40582 ), Vector2( 132.102, 70.8656 ), Vector2( 134.244, 96.5894 ) ]
+}
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 0.3
 loop = true
 tracks/0/type = "value"
@@ -417,7 +618,7 @@ tracks/3/keys = {
 "values": [ Vector2( -0.667603, -1.16528 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Cuerpo:texture")
@@ -468,8 +669,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1.92361, -2.73878 ) ]
 }
 
-[sub_resource type="Animation" id=9]
-resource_name = "Salto ligero"
+[sub_resource type="Animation" id=10]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Cuerpo:texture")
@@ -484,37 +684,35 @@ tracks/0/keys = {
 "values": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ) ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=10]
+[sub_resource type="AnimationNodeAnimation" id=11]
 animation = "Agachado"
 
-[sub_resource type="AnimationNodeAnimation" id=11]
-animation = "Ataque combo"
-
 [sub_resource type="AnimationNodeAnimation" id=12]
-animation = "Ataque fuerte"
+animation = "Ataque combo"
 
 [sub_resource type="AnimationNodeAnimation" id=13]
 animation = "Ataque fuerte"
 
 [sub_resource type="AnimationNodeAnimation" id=14]
-animation = "Ataque ligero"
+animation = "Ataque fuerte"
 
 [sub_resource type="AnimationNodeAnimation" id=15]
-animation = "Correr"
+animation = "Ataque ligero"
 
 [sub_resource type="AnimationNodeAnimation" id=16]
-animation = "Golpe salto"
+animation = "Correr"
 
 [sub_resource type="AnimationNodeAnimation" id=17]
-animation = "Inmovil"
+animation = "Golpe salto"
 
 [sub_resource type="AnimationNodeAnimation" id=18]
-animation = "Salto"
+animation = "Inmovil"
 
 [sub_resource type="AnimationNodeAnimation" id=19]
-animation = "Salto ligero"
+animation = "Salto"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "Salto ligero"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=21]
 
@@ -529,8 +727,6 @@ animation = "Salto ligero"
 [sub_resource type="AnimationNodeStateMachineTransition" id=26]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=27]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=28]
 switch_mode = 2
@@ -542,59 +738,67 @@ auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=30]
 switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=31]
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=32]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=33]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=34]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=35]
 switch_mode = 2
 auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=36]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachine" id=37]
-states/Agachado/node = SubResource( 10 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+
+[sub_resource type="AnimationNodeStateMachine" id=39]
+states/Agachado/node = SubResource( 11 )
 states/Agachado/position = Vector2( 494, 177 )
-states/Ataquecombo/node = SubResource( 11 )
+states/Ataquecombo/node = SubResource( 12 )
 states/Ataquecombo/position = Vector2( 162, 177 )
-states/Ataquefuerte/node = SubResource( 12 )
-states/Ataquefuerte/position = Vector2( 93, 321 )
-states/Ataquefuerte2/node = SubResource( 13 )
-states/Ataquefuerte2/position = Vector2( 318, 581.772 )
-states/Ataqueligero/node = SubResource( 14 )
+states/Ataquefuerte/node = SubResource( 13 )
+states/Ataquefuerte/position = Vector2( 94, 321 )
+states/Ataquefuerte2/node = SubResource( 14 )
+states/Ataquefuerte2/position = Vector2( 313, 585.772 )
+states/Ataqueligero/node = SubResource( 15 )
 states/Ataqueligero/position = Vector2( 177, 472 )
-states/Correr/node = SubResource( 15 )
+states/Correr/node = SubResource( 16 )
 states/Correr/position = Vector2( 494, 492 )
-states/Golpesalto/node = SubResource( 16 )
+states/Golpesalto/node = SubResource( 17 )
 states/Golpesalto/position = Vector2( 732, 501.292 )
-states/Inmovil/node = SubResource( 17 )
+states/Inmovil/node = SubResource( 18 )
 states/Inmovil/position = Vector2( 494, 321 )
-states/Salto/node = SubResource( 18 )
+states/Salto/node = SubResource( 19 )
 states/Salto/position = Vector2( 732, 321 )
-states/Saltoligero/node = SubResource( 19 )
+states/Saltoligero/node = SubResource( 20 )
 states/Saltoligero/position = Vector2( 732, 412.292 )
-transitions = [ "Inmovil", "Correr", SubResource( 20 ), "Correr", "Inmovil", SubResource( 21 ), "Inmovil", "Salto", SubResource( 22 ), "Salto", "Inmovil", SubResource( 23 ), "Inmovil", "Agachado", SubResource( 24 ), "Agachado", "Inmovil", SubResource( 25 ), "Inmovil", "Ataqueligero", SubResource( 26 ), "Ataqueligero", "Inmovil", SubResource( 27 ), "Ataquefuerte", "Inmovil", SubResource( 28 ), "Ataquecombo", "Inmovil", SubResource( 29 ), "Ataqueligero", "Ataquefuerte", SubResource( 30 ), "Ataquefuerte", "Ataquecombo", SubResource( 31 ), "Inmovil", "Ataquefuerte2", SubResource( 32 ), "Ataquefuerte2", "Inmovil", SubResource( 33 ), "Inmovil", "Saltoligero", SubResource( 34 ), "Saltoligero", "Golpesalto", SubResource( 35 ), "Golpesalto", "Inmovil", SubResource( 36 ) ]
+transitions = [ "Inmovil", "Correr", SubResource( 21 ), "Correr", "Inmovil", SubResource( 22 ), "Inmovil", "Salto", SubResource( 23 ), "Salto", "Inmovil", SubResource( 24 ), "Inmovil", "Agachado", SubResource( 25 ), "Agachado", "Inmovil", SubResource( 26 ), "Inmovil", "Ataqueligero", SubResource( 27 ), "Ataqueligero", "Inmovil", SubResource( 28 ), "Ataquefuerte", "Inmovil", SubResource( 29 ), "Ataquecombo", "Inmovil", SubResource( 30 ), "Ataqueligero", "Ataquefuerte", SubResource( 31 ), "Ataquefuerte", "Ataquecombo", SubResource( 32 ), "Inmovil", "Ataquefuerte2", SubResource( 33 ), "Ataquefuerte2", "Inmovil", SubResource( 34 ), "Inmovil", "Saltoligero", SubResource( 35 ), "Golpesalto", "Inmovil", SubResource( 36 ), "Ataquefuerte2", "Ataqueligero", SubResource( 37 ), "Inmovil", "Golpesalto", SubResource( 38 ) ]
 start_node = "Inmovil"
-graph_offset = Vector2( -95.7951, 58.754 )
+graph_offset = Vector2( -88.6972, 112.767 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=38]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=40]
 
-[sub_resource type="CapsuleShape2D" id=40]
+[sub_resource type="CapsuleShape2D" id=41]
 radius = 48.6909
 height = 67.8892
 
-[sub_resource type="RectangleShape2D" id=41]
+[sub_resource type="RectangleShape2D" id=42]
 extents = Vector2( 49.6004, 59.7758 )
+
+[sub_resource type="CanvasItemMaterial" id=43]
+blend_mode = 4
 
 [node name="Enemigo" type="KinematicBody2D" groups=[
 "Enemigos",
@@ -604,45 +808,45 @@ scale = Vector2( -1, 1 )
 script = ExtResource( 45 )
 
 [node name="Colisiom" type="CollisionShape2D" parent="."]
-position = Vector2( -5.76341, 92.5636 )
-shape = SubResource( 42 )
+position = Vector2( 1.53649, 100.473 )
+shape = SubResource( 1 )
 
 [node name="Cuerpo" type="Sprite" parent="."]
 position = Vector2( -0.667603, -1.16528 )
 scale = Vector2( 3.05932, 3.05932 )
-texture = ExtResource( 1 )
+texture = ExtResource( 4 )
 
 [node name="Animaciones" type="AnimationPlayer" parent="."]
 pause_mode = 1
-anims/Agachado = SubResource( 1 )
-"anims/Ataque combo" = SubResource( 2 )
-"anims/Ataque fuerte" = SubResource( 3 )
-"anims/Ataque ligero" = SubResource( 4 )
-anims/Correr = SubResource( 5 )
-"anims/Golpe salto" = SubResource( 6 )
-anims/Inmovil = SubResource( 7 )
-anims/Salto = SubResource( 8 )
-"anims/Salto ligero" = SubResource( 9 )
+anims/Agachado = SubResource( 2 )
+"anims/Ataque combo" = SubResource( 3 )
+"anims/Ataque fuerte" = SubResource( 4 )
+"anims/Ataque ligero" = SubResource( 5 )
+anims/Correr = SubResource( 6 )
+"anims/Golpe salto" = SubResource( 7 )
+anims/Inmovil = SubResource( 8 )
+anims/Salto = SubResource( 9 )
+"anims/Salto ligero" = SubResource( 10 )
 
 [node name="Arboldeanimaciones" type="AnimationTree" parent="."]
-tree_root = SubResource( 37 )
+tree_root = SubResource( 39 )
 anim_player = NodePath("../Animaciones")
 active = true
-parameters/playback = SubResource( 38 )
+parameters/playback = SubResource( 40 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="Colision_cuerpo" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 1.99879, 16.9132 )
-shape = SubResource( 40 )
+shape = SubResource( 41 )
 
 [node name="golpe" type="Area2D" parent="." groups=[
 "golpe_enemigo",
 ]]
 
 [node name="colision_golpe" type="CollisionShape2D" parent="golpe"]
-position = Vector2( 105, 3.498 )
-shape = SubResource( 41 )
+position = Vector2( 120.136, 3.498 )
+shape = SubResource( 42 )
 disabled = true
 
 [node name="Tiempo" type="Timer" parent="."]
@@ -662,19 +866,33 @@ cast_to = Vector2( -1000, 0 )
 collide_with_areas = true
 
 [node name="Eyes_left" type="RayCast2D" parent="."]
-position = Vector2( 55.1073, 4.6137 )
+position = Vector2( 60.0902, 4.6478 )
 enabled = true
 cast_to = Vector2( 50, 0 )
 collide_with_areas = true
 
 [node name="Eyes_left2" type="RayCast2D" parent="."]
-position = Vector2( 55.1073, 4.6137 )
+position = Vector2( 59.7072, 4.6137 )
 enabled = true
 cast_to = Vector2( 1000, 0 )
 collide_with_areas = true
 
 [node name="Cooldown_ataque" type="Timer" parent="."]
 wait_time = 3.0
+one_shot = true
+
+[node name="Posicion_particulas" type="Position2D" parent="."]
+position = Vector2( -0.763382, 0.401749 )
+
+[node name="Particulas_chispa" parent="Posicion_particulas" instance=ExtResource( 46 )]
+material = SubResource( 43 )
+position = Vector2( 125.804, 50.4391 )
+
+[node name="Audio2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 47 )
+
+[node name="Audio1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 48 )
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="timeout" from="Tiempo" to="." method="_on_Tiempo_timeout"]
 [connection signal="timeout" from="Cooldown_ataque" to="." method="_on_Cooldown_ataque_timeout"]

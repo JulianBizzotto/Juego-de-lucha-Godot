@@ -15,9 +15,9 @@
 
 [resource]
 resource_name = "Golpe largo"
-length = 1.5
+length = 4.0
 loop = true
-step = 10.0
+step = 10.013
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyPivot/Images:texture")
 tracks/0/interp = 1
@@ -25,7 +25,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.0668447, 0.17314, 0.299041, 0.428606, 0.541623, 0.651822, 0.769702, 0.907794, 1.01798, 1.1431, 1.26468, 1.37346 ),
+"times": PoolRealArray( 0, 0.296845, 0.55314, 0.839041, 1.06861, 1.43162, 1.84182, 2.2297, 2.70779, 3.16798, 3.3831, 3.61468, 3.87346 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 12 ) ]
@@ -49,10 +49,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.0667385, 0.0668344, 0.173049, 0.173141, 0.29886, 0.298991, 0.428522, 0.428603, 0.541482, 0.541589, 0.651646, 0.651771, 0.769559, 0.769644, 0.907743, 0.907784, 1.01791, 1.018 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0.296523, 0.296921, 0.549046, 0.558196, 0.838972, 0.839018, 1.06848, 1.06858, 1.43159, 1.43167, 1.84183, 1.84187, 2.22963, 2.22975, 2.70772, 2.70779, 3.1679, 3.16798, 3.38312 ),
+"transitions": PoolRealArray( 2.39436e-05, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -2.37842, 3.56763 ), Vector2( 0.561256, 0 ), Vector2( -66.5956, 8.8857 ), Vector2( -66.2976, 8.4559 ), Vector2( -91.2922, 23.9285 ), Vector2( -96.2236, 25.6616 ), Vector2( -120.055, 11.3703 ), Vector2( -123.016, 10.5379 ), Vector2( 16.2072, 8.15747 ), Vector2( 15.3841, 10.0667 ), Vector2( 84.4229, -4.21556 ), Vector2( 86.866, -2.09663 ), Vector2( 77.3469, 27.6582 ), Vector2( 73.5504, 27.9387 ), Vector2( 136.621, 23.1787 ), Vector2( 135.494, 21.8791 ), Vector2( 211.625, 18.3101 ), Vector2( 209.465, 15.5348 ), Vector2( 22.2722, 7.18172 ) ]
+"values": [ Vector2( -7.1613, 3.9733 ), Vector2( -63.2844, 9.5856 ), Vector2( -59.471, 9.20426 ), Vector2( -86.2713, 26.0273 ), Vector2( -85.9261, 25.6126 ), Vector2( -112.302, 12.985 ), Vector2( -104.889, 12.3496 ), Vector2( 12.2529, 4.4576 ), Vector2( 9.84849, 4.39762 ), Vector2( 111.992, -5.70457 ), Vector2( 104.541, -4.85106 ), Vector2( 87.6978, 28.8282 ), Vector2( 71.2887, 22.1632 ), Vector2( 135.264, 19.9171 ), Vector2( 141.708, 23.4695 ), Vector2( 221.393, 14.4887 ), Vector2( 221.953, 15.2344 ), Vector2( 19.8887, 9.62105 ), Vector2( 5.03706, 7.03822 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Golpe/Colision_Ataques:disabled")
@@ -61,7 +61,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.546729, 1.01922 ),
+"times": PoolRealArray( 0, 1.47911, 3.23167 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, true ]
@@ -73,8 +73,68 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.546729, 0.653119, 0.771331, 0.908752 ),
+"times": PoolRealArray( 0, 1.97742, 2.58854, 2.73316, 4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -8.16832, -14.7828 ), Vector2( 124.753, -12.8929 ), Vector2( 109.919, -13.1038 ), Vector2( 220.687, -7.03858 ), Vector2( 377.225, -9.53674e-07 ) ]
+"values": [ Vector2( 5.77951, -2.77983 ), Vector2( 107.09, -9.64367 ), Vector2( 224.949, -5.15384 ), Vector2( 393.901, -7.59034 ), Vector2( 5.77951, -2.77983 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AudioStreamPlayer2:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( -0.02, 0, 0.00279462, 3.53454 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Posicion_particulas/Particulas_explosion:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.43284, 3.09, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Posicion_particulas/Particulas_explosion:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1.56746, 1.99665, 2.42117, 2.71507, 3.16676 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -5.95935, 1.17012 ), Vector2( 272.041, -12.8299 ), Vector2( 224.991, -15.3598 ), Vector2( 331.052, -11.857 ), Vector2( 496.317, -9.43199 ), Vector2( 491.754, -8.70508 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Posicion_particulas/Particulas_viento:emitting")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1.14761, 3.24573 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath(".:mana_actual")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 3.61 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
 }

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Zoro uhh.ogg-02f67282f70c4375e7c16aa9a209695e.oggstr"
+
+[deps]
+
+source_file="res://Zoro uhh.ogg"
+dest_files=[ "res://.import/Zoro uhh.ogg-02f67282f70c4375e7c16aa9a209695e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

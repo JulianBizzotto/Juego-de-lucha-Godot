@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Viento.png" type="Texture" id=1]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0.929412, 0.843137, 0.843137, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 0.26
+emission_shape = 1
+emission_sphere_radius = 100.0
+flag_disable_z = true
+direction = Vector3( 1, 2, 0 )
+spread = 111.49
+gravity = Vector3( 400, 0, 0 )
+initial_velocity = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.6
+color_ramp = SubResource( 2 )
+
+[node name="Particulas_viento" type="Particles2D"]
+position = Vector2( 800.046, 458.133 )
+amount = 20
+lifetime = 2.0
+visibility_rect = Rect2( -99.6013, -87.0819, 986.048, 183.547 )
+process_material = SubResource( 3 )
+texture = ExtResource( 1 )

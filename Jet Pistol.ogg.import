@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Jet Pistol.ogg-fa99b1271edc6757b1d65b8e32d884df.oggstr"
+
+[deps]
+
+source_file="res://Jet Pistol.ogg"
+dest_files=[ "res://.import/Jet Pistol.ogg-fa99b1271edc6757b1d65b8e32d884df.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

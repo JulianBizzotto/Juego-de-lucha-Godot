@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Efecto dos espada.ogg-046e83baf8abf2db72b899a6c9e86beb.oggstr"
+
+[deps]
+
+source_file="res://Efecto dos espada.ogg"
+dest_files=[ "res://.import/Efecto dos espada.ogg-046e83baf8abf2db72b899a6c9e86beb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
